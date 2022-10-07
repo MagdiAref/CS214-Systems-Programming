@@ -2,10 +2,10 @@
 List of C projects completed in this course.
 
 Grep.C :
-- Write a program that takes a string as a command-line argument and then                                                                                                              
-reads from stdin until the user closes stdin (with ctrl-d). It should print                                                                                                            
-every line that contains the given string. It should be case-sensitive by                                                                                                              
-default, but case-insensitive if the command line option -i is given before                                                                                                            
+- Write a program that takes a string as a command-line argument and then                                                                           
+reads from stdin until the user closes stdin (with ctrl-d). It should print                                                                             
+every line that contains the given string. It should be case-sensitive by                                          
+default, but case-insensitive if the command line option -i is given before                                                                                   
 the string.
 
 Factor.C :
@@ -23,5 +23,39 @@ output
     // increasing order such as 13, 17 
     // if n is prime print out n 
     // if factors are repeated then print them out as many times needed // 32 = 2 2 2 2 2
+    
+Sort.C
+- Write a program that reads from stdin and sorts its input. If no commandline option is given, it should use case-insensitive lexicographic sorting. If
+the -n option is given, it should use numeric sorting (in this case, you can
+assume all inputs will be valid integers).
+
+Uniq.C
+- Write a program that reads from stdin and filters out duplicate lines of input.
+It should read lines from stdin, and then print each unique line along with
+a count of how many times it appeared. Input is case-sensitive, so “hello”
+and “Hello” are not duplicates.
+Note that only adjacent duplicates count, so if the input were the lines
+“hello”, “world”, and “hello” again, all three would be treated as unique.
+
+Monster.C
+- This program is a game of a player and monster moving on a 2D grid. The
+player has a goal to reach. The monster wants to reach the player.
+In each turn, the player moves one square, then the monster moves
+towards the player. If either reaches their target, the game ends immediately.
+If the player reaches the goal, it prints “player wins!”. If the monster reaches
+the player, it prints “monster wins!”.
+The player’s moves (N, W, S, or E) are read from stdin, one per line.
+If the move is invalid (e.g., the player tries to move off the board, print
+“invalid move” and read a new move). If the player intentionally moves into
+the monster’s square, it counts as the monster winning.
+On its turn, the monster considers the horizontal and vertical distances
+to reach the player and moves to reduce the larger of these two. If they’re
+the same, the monster chooses the vertical direction. Its move should be
+printed, e.g., “monster moves E”.
+For example, suppose we have a 10 × 10 grid where the player starts at
+(0, 0) and chooses to move along the blue path to reach the goal at (8, 2).
+The monster starts at (3, 9) and its moves are shown in red. The player
+reaches the goal before the monster reaches the player, so the player wins.
+
     
 
